@@ -72,7 +72,7 @@ body{
   /* 🔥 watermark image */
   background-image:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), /* dark overlay */
-    url('./images/B3.webp');
+    url('./images/B2.webp');
 
   background-position:center;
   background-size:cover;
@@ -143,7 +143,7 @@ body{
   /* 🔥 background image + overlay */
   background:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url('./images/B3.webp') center/cover no-repeat;
+    url('./images/B2.webp') center/cover no-repeat;
 }
 
 /* ===== CENTER CONTENT ===== */
@@ -226,7 +226,7 @@ body{
   /* 🔥 centered image */
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url('./images/B3.webp') center center/cover no-repeat;
+    url('./images/B2.webp') center center/cover no-repeat;
 
   filter:grayscale(20%) brightness(0.8);
 
@@ -332,18 +332,15 @@ img{
 }
 
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:25px;
-  align-items:start;
+  width:100%;
 }
+
 .gallery img{
   width:100%;
-  height:300px;           /* 🔥 FIX HEIGHT */
-  object-fit:cover;       /* 🔥 keeps image clean */
+  height:auto;
   border-radius:20px;
   border:3px solid var(--gold);
-  transition:0.4s;
+  display:block;
 }
 
 .live{
@@ -464,7 +461,7 @@ footer{
 /* PARENTS */
 .parents{
   font-size:18px;
-  color:#f5e6b3;
+  color:#f5e6B2;
 
   letter-spacing:1px;
   margin-top:15px;
@@ -1400,9 +1397,9 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
     <link rel="preload" as="image" href="./images/C1.webp" fetchpriority="high">
     <source srcset="./images/C2.webp" type="image/webp">
     <img src="./images/C2.webp" fetchpriority="high" width="300" height="200">
-    <link rel="preload" as="image" href="./images/C2.webp" fetchpriority="high">
-    <source srcset="./images/C3.webp" type="image/webp">-->
-    <img src="./images/C3.webp" fetchpriority="high" width="300" height="200">
+    <link rel="preload" as="image" href="./images/C2.webp" fetchpriority="high">-->
+    <source srcset="./images/C3.webp" type="image/webp">
+    <img src="./images/C3.webp" fetchpriority="high">
     <link rel="preload" as="image" href="./images/C3.webp" fetchpriority="high">
   </div>
 </section>
@@ -1503,7 +1500,7 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
 <div class="music" onclick="toggleMusic(event)">🎵</div>
 
 <audio id="music" loop preload="auto">
-    <source src="https://mp3tourl.com/audio/1777597489328-9b5b3cc9-03fc-4bdf-a4c6-07fe7f1c593e.mp3" type="audio/mpeg">
+    <source src="https://mp3tourl.com/audio/1777597489328-9b5B2cc9-03fc-4bdf-a4c6-07fe7f1c593e.mp3" type="audio/mpeg">
 </audio>
 
 <script>
