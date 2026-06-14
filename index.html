@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sinem ❤️ Satish</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&family=DM+Sans&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#D4A853;
+  --maroon:#FFD700;
+  --bg:#F8F4EC;
+}
+
+body{
+  margin:0;
+  font-family:'DM Sans';
+  background:var(--bg);
+  color:#2C1A0E;
+}
+
+/* NAVBAR */
+.nav{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:90%;
+  max-width:1100px;
+  padding:14px 25px;
+  background:white;
+  border-radius:50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  z-index:1000;
+}
+
+.nav a{
+  text-decoration:none;
+  margin:0 10px;
+  color:var(--maroon);
+  font-weight:500;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:#F8F4EC;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
+ /* HERO WITH WATERMARK EFFECT */
+.hero{
+  position:relative;
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  /* 🔥 base color */
+  background-color:#6b0000;
+
+  /* 🔥 watermark image */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), /* dark overlay */
+    url('./images/B2.webp');
+
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+  /* ===== RESPONSIVE HERO TEXT ===== */
+
+/* Top line */
+.top-text{
+  font-size: clamp(14px, 2vw, 20px);
+  text-align: center;
+}
+
+/* Main title */
+.wedding-title{
+  font-size: clamp(32px, 6vw, 70px);
+  text-align: center;
+}
+
+/* Names */
+.bride,
+.groom{
+  font-size: clamp(28px, 5vw, 60px);
+  text-align: center;
+}
+
+  .hero-content h2,
+.hero-content h3,
+.hero-content p{
+  margin: 8px 0;
+}
+
+  .hero-content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+/* Weds */
+.weds{
+  font-size: clamp(16px, 3vw, 26px);
+  text-align: center;
+}
+
+/* Quote */
+.invite-quote{
+  font-size: clamp(14px, 2.5vw, 18px);
+  text-align: center;
+  max-width: 600px;
+  margin: 15px auto;
+}
+  /* ===== HERO SECTION ===== */
+.hero{
+  position:relative;
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  /* 🔥 fallback color */
+  background-color:#6b0000;
+
+  /* 🔥 background image + overlay */
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('./images/B2.webp') center/cover no-repeat;
+}
+
+/* ===== CENTER CONTENT ===== */
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  color:white;
+  padding:20px;
+}
+
+/* ===== FORCE WHITE TEXT ===== */
+.hero-content *{
+  color:white !important;
+}
+
+/* ===== STYLING ===== */
+.top-text{
+  font-family:'Playfair Display';
+  font-size:18px;
+  letter-spacing:2px;
+  margin-bottom:10px;
+  color:#f5e6d3 !important;
+}
+
+.wedding-title{
+  font-family:'Great Vibes';
+  font-size:60px;
+  margin:10px 0;
+
+  background: linear-gradient(90deg,#caa64b,#FFD700,#b8963c);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.bride, .groom{
+  font-family:'Great Vibes';
+  font-size:50px;
+  margin:10px 0;
+}
+
+.weds{
+  font-family:'Playfair Display';
+  font-size:26px;
+  letter-spacing:3px;
+
+  /* 🔥 SAME GOLD AS NAMES */
+  background: linear-gradient(90deg,#caa64b,#FFD700,#b8963c);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ===== TEXT SHADOW FOR READABILITY ===== */
+.hero-content h2,
+.hero-content h3,
+.hero-content p{
+  text-shadow:0 4px 15px rgba(0,0,0,0.7);
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .wedding-title{font-size:40px;}
+  .bride,.groom{font-size:34px;}
+  .top-text{font-size:14px;}
+}
+
+/* ✅ FIXED: IMAGE FROM TOP */
+.hero::before{
+  content:"";
+  position:absolute;   /* ✅ fix */
+  inset:0;
+
+  /* 🔥 centered image */
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('./images/B2.webp') center center/cover no-repeat;
+
+  filter:grayscale(20%) brightness(0.8);
+
+  /* smooth zoom animation */
+  animation: zoomHero 20s ease-in-out infinite alternate;
+}
+
+.hero-content{
+  position:relative;
+}
+
+.top-text{
+  font-family:'Playfair Display';
+  font-size:18px;
+  letter-spacing:2px;
+  color:#ffea0a;
+  margin-bottom:10px;
+}
+
+.hero h1{
+  font-family:'Great Vibes';
+  font-size:75px;
+  background: linear-gradient(90deg,#caa64b,#FFD700,#b8963c);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 2px 4px rgba(0,0,0,0.3);
+}
+
+.section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  max-width:700px;
+  margin:auto;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  border-top:4px solid var(--gold);
+}
+
+.title{
+  font-family:'Playfair Display';
+  font-size:36px;
+  color:var(--maroon);
+}
+
+.title span{
+  font-family:'Great Vibes';
+  color:var(--gold);
+}
+
+.timer{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+  /* 🔥 image performance */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+  will-change:transform;
+}
+
+.time-box{
+  background:var(--maroon);
+  color:white;
+  padding:15px;
+  border-radius:10px;
+  min-width:70px;
+}
+
+.num{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.label{
+  font-size:12px;
+}
+
+.invited{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.invited img{
+  width:260px;
+  height:180px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.invited-text{
+  max-width:400px;
+  text-align:left;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:25px;
+  align-items:start;
+}
+.gallery img{
+  width:100%;
+  height:300px;           /* 🔥 FIX HEIGHT */
+  object-fit:cover;       /* 🔥 keeps image clean */
+  border-radius:20px;
+  border:3px solid var(--gold);
+  transition:0.4s;
+}
+
+.live{
+  background:var(--maroon);
+  color:white;
+  padding:60px 20px;
+}
+
+.live a{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  border-radius:30px;
+  background:var(--gold);
+  color:white;
+  text-decoration:none;
+}
+
+iframe{
+  width:100%;
+  height:300px;
+  border-radius:15px;
+  border:0;
+}
+
+.music{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:var(--maroon);
+  color:white;
+  border-radius:50%;
+  padding:15px;
+  cursor:pointer;
+}
+
+footer{
+  background:var(--maroon);
+  color:white;
+  padding:40px;
+}
+
+/* INVITATION TEXT STYLING */
+.invite{
+  position:relative;
+  text-align:center;
+  z-index:2;
+  color:#6b0000;
+}
+
+/* TOP LINE */
+.invite .top-text{
+  font-size:20px;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+/* WEDDING TITLE */
+/* COMMON GOLD GRADIENT */
+:root{
+  --gold-gradient: linear-gradient(90deg,#caa64b,#FFD700,#b8963c);
+}
+
+/* WEDDING TITLE */
+.wedding-title{
+  font-family:'Great Vibes';
+  font-size:60px;
+
+  background: var(--gold-gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* BRIDE */
+.bride{
+  font-family:'Great Vibes';
+  font-size:55px;
+
+  background: var(--gold-gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:0 4px 10px rgba(0,0,0,0.6);
+}
+/* WEDS inside formal invitation → maroon */
+.formal-invite .weds{
+  color:#7A1E1E !important;
+  background:none !important;
+  -webkit-text-fill-color:#7A1E1E !important;
+  text-shadow:none;
+}
+
+/* WEDS */
+.weds{
+  font-family:'Playfair Display';
+  font-size:26px;
+
+  color:#7A1E1E;
+  letter-spacing:3px;
+
+  text-shadow:0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* GROOM */
+.groom{
+  font-family:'Great Vibes';
+  font-size:55px;
+
+  background: var(--gold-gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* PARENTS */
+.parents{
+  font-size:18px;
+  color:#f5e6b3;
+
+  letter-spacing:1px;
+  margin-top:15px;
+
+  text-shadow:0 2px 6px rgba(0,0,0,0.5);
+}
+/* VENUE SECTION */
+.venue{
+  text-align:center;
+}
+
+/* VENUE TITLE */
+.venue-title{
+  color:#D4A853;
+  letter-spacing:4px;
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+/* MAIN VENUE NAME */
+.venue-name{
+  font-size:42px;
+  color:#6b0000;
+  letter-spacing:3px;
+  margin:10px 0;
+}
+
+/* ADDRESS */
+.venue-address{
+  font-size:22px;
+  color:#555;
+  line-height:1.6;
+}
+
+:root{
+  --gold:#D4A853;
+  --maroon:#7A1E1E;   /* already exists */
+  --deep-maroon:#6b0000; /* 🔥 add this (matches live section) */
+}
+
+/* CONTACT SECTION */
+.contact-section{
+  background: var(--deep-maroon); /* 🔥 same as live */
+  padding:100px 20px;
+  text-align:center;
+  color:white;
+}
+
+/* subtle heart pattern */
+.contact-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url('https://www.transparenttextures.com/patterns/hearts.png');
+  opacity:0.08;
+}
+
+.contact-content{
+  position:relative;
+  z-index:2;
+}
+
+.contact-tag{
+  display:inline-block;
+  background:#a52a2a;
+  padding:6px 20px;
+  border-radius:20px;
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.contact-title{
+  font-family:'Playfair Display';
+  font-size:60px;
+  margin-bottom:10px;
+}
+
+.contact-title span{
+  font-family:'Great Vibes';
+}
+
+.contact-sub{
+  color:#ffdede;
+  margin-bottom:50px;
+}
+
+.contact-cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.contact-card{
+  background:rgba(255,255,255,0.08);
+  padding:30px 40px;
+  border-radius:20px;
+  min-width:280px;
+  backdrop-filter:blur(8px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.contact-card:hover{
+  transform:translateY(-5px);
+}
+
+.contact-name{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.contact-phone{
+  font-size:18px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+
+  .invite-quote{
+  color:#D4A853;
+  text-shadow:0 2px 8px rgba(0,0,0,0.6);
+  font-style:italic;
+}
+
+/* ✅ Fix mobile top cut issue */
+body {
+  padding-top: 90px; /* space for navbar */
+}
+
+/* Better mobile spacing */
+@media (max-width: 768px) {
+
+  .nav {
+    top: 10px;
+    padding: 10px 15px;
+    border-radius: 30px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .hero {
+    height: auto; /* 🔥 important fix */
+    min-height: 100vh;
+    padding-top: 40px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero h1,
+  .wedding-title {
+    font-size: 42px;
+  }
+
+  .bride,
+  .groom {
+    font-size: 38px;
+  }
+
+  .top-text {
+    font-size: 16px;
+  }
+
+  .weds {
+    font-size: 18px;
+  }
+
+  .parents {
+    font-size: 14px;
+  }
+}
+/* ===== NEW LIVE SECTION ===== */
+.live-new{
+  background:#f5f0ea;
+  padding:100px 20px;
+  text-align:center;
+}
+
+.live-container{
+  max-width:900px;
+  margin:auto;
+}
+
+/* top badge */
+.live-tag{
+  display:inline-block;
+  background:#f3e6e6;
+  color:#c44;
+  padding:8px 18px;
+  border-radius:20px;
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+/* heading */
+.live-title{
+  font-family:'Playfair Display';
+  font-size:60px;
+  color:#7A1E1E;
+  margin-bottom:15px;
+}
+
+.live-title span{
+  font-family:'Great Vibes';
+  color:#D4A853;
+}
+
+/* subtitle */
+.live-sub{
+  font-style:italic;
+  color:#a78b8b;
+  margin-bottom:30px;
+}
+
+/* button */
+.live-btn{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:30px;
+  background:#D4A853;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.live-btn:hover{
+  background:#b8933f;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .live-title{
+    font-size:38px;
+  }
+
+  .live-sub{
+    font-size:14px;
+    padding:0 10px;
+  }
+}
+  .phone-link{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  display:inline-block;
+
+  /* 🔥 prevents number from breaking */
+  white-space:nowrap;
+}
+
+/* optional underline style */
+.phone-link::after{
+  content:"";
+  display:block;
+  height:1px;
+  background:white;
+  margin-top:5px;
+  opacity:0.5;
+}
+/* 🔥 Reduce section gap (balanced) */
+.section{
+  padding:60px 20px !important;
+}
+
+/* smaller gap for mobile */
+@media(max-width:768px){
+  .section{
+    padding:40px 15px !important;
+  }
+}
+
+/* 🔥 Image borders */
+.gallery img{
+  border:3px solid var(--gold);
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.03);
+}
+
+.invited img{
+  border:4px solid var(--gold);
+}
+
+/* 🔥 Improve image rendering */
+img{
+  max-width:100%;
+  height:auto;
+}
+/* ===== GLOBAL SMOOTH ===== */
+html{
+  scroll-behavior:smooth;
+}
+
+/* ===== SECTION FADE-IN ===== */
+.fade-up{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1s ease;
+}
+
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== HERO TEXT ANIMATION ===== */
+.hero-content h2,
+.hero-content h3,
+.hero-content p{
+  animation:fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== GOLD LINE DECOR ===== */
+.section::before{
+  content:"";
+  display:block;
+  width:60px;
+  height:2px;
+  background:var(--gold);
+  margin:0 auto 20px;
+  opacity:0.6;
+}
+
+/* ===== CARD HOVER EFFECT ===== */
+.card, .contact-card{
+  transition:0.4s;
+}
+
+.card:hover, .contact-card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* ===== GALLERY EFFECT ===== */
+.gallery img{
+  transition:0.5s;
+  filter:brightness(0.9);
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+  filter:brightness(1.1);
+}
+
+/* ===== IMAGE FLOAT (INVITED) ===== */
+.invited img{
+  animation:floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0);}
+}
+
+/* ===== BUTTON ANIMATION ===== */
+.live-btn{
+  position:relative;
+  overflow:hidden;
+}
+
+.live-btn::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.3);
+  transition:0.5s;
+}
+
+.live-btn:hover::after{
+  left:100%;
+}
+
+/* ===== CONTACT GLOW ===== */
+.contact-card{
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+.contact-card:hover{
+  box-shadow:0 0 20px rgba(255,215,0,0.3);
+}
+
+/* ===== TITLE DECOR ===== */
+.title{
+  position:relative;
+}
+
+.title::after{
+  content:"";
+  display:block;
+  width:40px;
+  height:3px;
+  background:var(--gold);
+  margin:10px auto 0;
+}
+
+/* ===== VENUE MAP HOVER ===== */
+iframe{
+  transition:0.4s;
+}
+
+iframe:hover{
+  transform:scale(1.02);
+}
+
+/* ===== MUSIC BUTTON PULSE ===== */
+.music{
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(122,30,30,0.6);}
+  70%{box-shadow:0 0 0 15px rgba(122,30,30,0);}
+  100%{box-shadow:0 0 0 0 rgba(122,30,30,0);}
+}
+/* ===== QUOTE SECTION (MAROON + CREAM/WHITE) ===== */
+.quote-section{
+  background:linear-gradient(135deg,#6b0000,#7A1E1E,#3d0c0c);
+  padding:100px 20px;
+  text-align:center;
+  color:#f5e6d3; /* cream text */
+  position:relative;
+  overflow:hidden;
+}
+
+/* soft glow */
+.quote-section::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle,rgba(245,230,211,0.15),transparent);
+  top:20%;
+  left:50%;
+  transform:translateX(-50%);
+  filter:blur(80px);
+}
+
+/* container */
+.quote-container{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+  z-index:2;
+}
+
+/* main quote */
+.quote-main{
+  font-family:'Playfair Display';
+  font-size:40px;
+  line-height:1.5;
+  font-style:italic;
+  margin-bottom:30px;
+  color:#fffaf0; /* soft white */
+  animation:fadeInUp 1.5s ease;
+}
+
+/* highlight line */
+.quote-main span{
+  color:#f3e5c0; /* light cream */
+  display:block;
+  margin-top:10px;
+}
+
+/* sub text */
+.quote-sub{
+  font-size:18px;
+  line-height:1.8;
+  color:#e8d8c3; /* muted cream */
+  margin:15px 0;
+  animation:fadeInUp 2s ease;
+}
+
+/* vertical lines */
+.quote-line{
+  width:2px;
+  height:40px;
+  background:#f3e5c0; /* cream line */
+  margin:20px auto;
+  opacity:0.7;
+}
+/* add gap above quote section */
+.quote-section{
+  margin-top:40px;  /* adjust: 30px / 50px if needed */
+}
+/* ===== VENUE SIDE BY SIDE ===== */
+.venue-flex{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+/* left text */
+.venue-left{
+  flex:1;
+  min-width:280px;
+  text-align:left;
+}
+
+/* right map */
+.venue-right{
+  flex:1;
+  min-width:300px;
+}
+
+/* map style */
+.venue-right iframe{
+  width:100%;
+  height:300px;
+  border-radius:15px;
+  border:0;
+}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  .venue-flex{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .venue-left{
+    text-align:center;
+  }
+}
+/* ===== FORMAL INVITATION (MAROON + CREAM) ===== */
+.formal-invite{
+  background:linear-gradient(135deg,#6b0000,#7A1E1E,#3d0c0c);
+  padding:100px 20px;
+  text-align:center;
+  color:#f5e6d3; /* cream */
+}
+
+.formal-tag{
+  display:inline-block;
+  border:1px solid #f3e5c0;
+  padding:6px 20px;
+  border-radius:20px;
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:20px;
+  color:#f3e5c0;
+}
+
+/* heading */
+.formal-title{
+  font-family:'Playfair Display';
+  font-size:50px;
+  margin-bottom:10px;
+  color:#fffaf0; /* soft white */
+}
+
+.formal-title span{
+  color:#f3e5c0; /* cream highlight */
+  font-family:'Great Vibes';
+}
+
+.formal-sub{
+  color:#e8d8c3;
+  margin-bottom:40px;
+  font-style:italic;
+}
+
+/* ===== CARD ===== */
+.invite-card{
+  background:#fffaf0; /* cream card */
+  color:#6b0000;
+  padding:50px 30px;
+  border-radius:10px;
+  max-width:700px;
+  margin:auto;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+
+  border:2px solid #6b0000;
+  position:relative;
+}
+
+/* inner border */
+.invite-card::before{
+  content:"";
+  position:absolute;
+  inset:10px;
+  border:1px solid #6b0000;
+}
+
+/* headings */
+.card-heading{
+  font-family:'Great Vibes';
+  font-size:36px;
+  margin-bottom:15px;
+  color:#6b0000;
+}
+
+.bride-name, .groom-name{
+  font-family:'Great Vibes';
+  font-size:34px;
+  margin:10px 0;
+  color:#7A1E1E;
+}
+
+/* section headings */
+.sumuhurtham, .venue-head, .yours{
+  margin-top:20px;
+  font-size:18px;
+  color:#7A1E1E;
+  text-decoration:underline;
+}
+
+/* text */
+.card-text{
+  font-size:16px;
+  line-height:1.7;
+  margin:10px 0;
+  color:#5a1a1a;
+}
+
+.bold{
+  font-weight:bold;
+}
+
+.card-footer{
+  margin-top:20px;
+  font-size:14px;
+  color:#6b0000;
+}
+
+/* subtle paper feel */
+.invite-card{
+  background-image:linear-gradient(
+    rgba(0,0,0,0.02) 1px,
+    transparent 1px
+  );
+  background-size:100% 28px;
+}
+/* container */
+.hero{
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+}
+
+/* image background */
+.hero-bg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  top:0;
+  left:0;
+  z-index:0;
+}
+
+/* overlay */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:1;
+}
+
+/* content on top */
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+/* mobile */
+@media(max-width:768px){
+  .formal-title{font-size:32px;}
+  .invite-card{padding:30px 20px;}
+}
+/* ===== FLORAL WATERMARK BASE ===== */
+.section,
+.quote-section,
+.formal-invite,
+.live-new,
+.contact-section{
+  position:relative;
+  overflow:hidden;
+}
+
+/* ===== LIGHT (CREAM SECTIONS) ===== */
+.section:nth-of-type(even)::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:url('https://www.transparenttextures.com/patterns/flowers.png');
+  background-size:200px;
+  opacity:0.08; /* subtle */
+
+  pointer-events:none;
+}
+
+/* ===== DARK (MAROON SECTIONS) ===== */
+.section:nth-of-type(odd)::before,
+.quote-section::before,
+.formal-invite::before,
+.live-new::before,
+.contact-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:url('https://www.transparenttextures.com/patterns/flowers.png');
+  background-size:200px;
+
+  /* 🔥 white floral for dark bg */
+  filter:invert(1);
+  opacity:0.06;
+
+  pointer-events:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="logo">🕉 Wedding</div>
+  <div>
+    <a href="#">Home</a>
+    <a href="#formalinvite">Invitation</a>
+    <!--<a href="#gallery">Gallery</a>
+    <a href="#live">Live</a>-->
+    <a href="#Location">Venue</a>
+    <a href="#Contact">Contact</a>
+  </div>
+</div>
+
+<section class="hero">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content invite">
+
+    <div class="top-text">
+      Sri Rasthu! | Shubhamasthu!! | Avignamasthu!!!
+    </div>
+
+    <h2 class="wedding-title">Wedding Invitation</h2>
+
+    <h3 class="bride">Chi. Sow. Sinem</h3>
+
+    <div class="weds">Weds</div>
+
+    <h3 class="groom">Chi. Satish</h3>
+
+    <p class="invite-quote">
+      “Together with their families invite you to celebrate their wedding”
+    </p>
+
+  </div>
+
+</section>
+
+<section class="section">
+  <h2 class="title">Sumuhurtham</h2>
+  <p>Wednesday, 24th June 2026 | 07:46 AM</p>
+
+  <div class="timer">
+    <div class="time-box">
+      <div class="num" id="days">00</div>
+      <div class="label">DAYS</div>
+    </div>
+    <div class="time-box">
+      <div class="num" id="hours">00</div>
+      <div class="label">HRS</div>
+    </div>
+    <div class="time-box">
+      <div class="num" id="mins">00</div>
+      <div class="label">MINS</div>
+    </div>
+    <div class="time-box">
+      <div class="num" id="secs">00</div>
+      <div class="label">SECS</div>
+    </div>
+  </div>
+<script>
+const w = new Date("June 24, 2026 07:46:00").getTime();
+
+setInterval(()=>{
+let n = new Date().getTime();
+let d = w - n;
+
+document.getElementById("days").innerText = Math.floor(d/86400000);
+document.getElementById("hours").innerText = Math.floor((d%86400000)/3600000);
+document.getElementById("mins").innerText = Math.floor((d%3600000)/60000);
+document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
+
+},1000);
+</script>
+
+<section class="quote-section">
+
+  <div class="quote-container">
+
+    <div class="quote-line top"></div>
+
+    <h2 class="quote-main">
+      "Like the sacred fire of the Saptapadi —
+      <span>once lit, it burns eternal."</span>
+    </h2>
+
+    <p class="quote-sub">
+      Guided by the divine grace of Lord Venkateswara and the sacred blessings of our elders,
+      two souls found each other in the most beautiful of ways.
+    </p>
+
+    <p class="quote-sub">
+      What began as a sacred arrangement by our families blossomed into a bond woven by destiny itself —
+      growing with devotion, trust, and the warmth of togetherness under the same sky.
+    </p>
+
+    <div class="quote-line bottom"></div>
+
+  </div>
+
+</section>
+
+<section id="formalinvite" class="formal-invite">
+
+  <div class="formal-container">
+
+    <div class="formal-tag">FORMAL INVITATION</div>
+
+    <h2 class="formal-title">
+      Our Wedding <span>Invitation</span>
+    </h2>
+
+    <p class="formal-sub">
+      “We solicit your gracious presence with family & friends”
+    </p>
+
+    <!-- CARD -->
+    <div class="invite-card">
+
+      <p class="top-line">
+        Sri Rasthu ! &nbsp;&nbsp; Shubhamasthu !! &nbsp;&nbsp; Avignamasthu !!!
+      </p>
+
+      <h3 class="card-heading">Wedding Invitation</h3>
+
+      <p class="card-text">
+        We solicit your gracious presence with family & friends on the auspicious occasion
+        of the marriage of our eldest son
+      </p>
+
+      <h3 class="groom-name">Chi. Satish</h3>
+
+      <div class="weds">Weds</div>
+
+      <h3 class="bride-name">Chi. Sow. Sinem</h3>
+      
+      <p class="card-sub">
+        (Only D/o Smt & Sri Hergul Sirma - Hayrettin Sirma)
+      </p>
+
+      <h4 class="sumuhurtham">Sumuhurtham :</h4>
+
+      <p class="card-text">
+        On Wednesday 24th<sup>th</sup> June 2026, at 07:46 a.m. "Karkataka Lagnam”
+      </p>
+
+      <h4 class="venue-head">Venue :</h4>
+
+      <p class="card-text">
+        S.V. Convention Centre <br>
+        Beside Indian Petrol Pump, RTC Colony Bus Stop,<br>
+        Hayathnagar, Ranga Reddy District, Telangana.
+      </p>
+
+      <h4 class="yours">Yours :</h4>
+
+      <p class="card-text bold">
+        Smt. Cheguri Laxmamma <br>
+        Sri Cheguri Chandramouli
+      </p>
+
+      <p class="card-footer">
+        With Best Compliments from:<br>
+        <center>Near & Dear.<center>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+  <h2 class="title">Invited <span>By</span></h2>
+
+  <div class="invited">
+    <!--<source srcset="./images/photo6.webp" type="image/webp">
+    <img src="./images/photo6.webp" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo6.webp" fetchpriority="high">-->
+
+
+    <div class="invited-text">
+      <p><b>Smt. Cheguri Laxmamma</b></p>
+      <p><b>& Sri Cheguri Chandramouli</b></p>
+      <p>Plot No : 33 , H No : 4-9-844, Lecturer's colony,<br>
+        Hayathnagar, Hyderabad, R.R Dist,<br>
+        Telangana, 501505</p>
+    </div>
+  </div>
+<!--<section id="gallery" class="section">
+  <h2 class="title">Photo <span>Gallery</span></h2>
+  <div class="gallery">
+    <source srcset="./images/photo3.webp" type="image/webp">
+    <img src="./images/photo3.webp" fetchpriority="high" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo3.webp" fetchpriority="high">
+    <source srcset="./images/photo4.webp" type="image/webp">
+    <img src="./images/photo4.webp" fetchpriority="high" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo4.webp" fetchpriority="high">
+    <source srcset="./images/photo2.webp" type="image/webp">
+    <img src="./images/photo2.webp" fetchpriority="high" width="300" height="200">
+    <link rel="preload" as="image" href="./images/photo2.webp" fetchpriority="high">
+  </div>
+</section>-->
+<section id="Location" class="section venue">
+
+  <h3 class="venue-title">VENUE:</h3>
+
+  <div class="venue-flex">
+
+    <!-- LEFT: TEXT -->
+    <div class="venue-left">
+      <h2 class="venue-name">S.V. Convention Centre</h2>
+
+      <p class="venue-address">
+        Beside Indian Petrol Pump, RTC Colony Bus Stop,<br>
+        Hayathnagar, Ranga Reddy District, Telangana.
+      </p>
+    </div>
+
+    <!-- RIGHT: MAP -->
+   <div class="venue-right">
+    <iframe
+    src="https://maps.google.com/maps?q=S.V%20Conventional%20Hall%20Hayathnagar%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    width="100%"
+    height="350"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
+</div>
+</section>
+
+<!--<section id="live" class="live-new">
+
+  <div class="live-container">
+
+    <div class="live-tag">● LIVE STREAM</div>
+
+    <h2 class="live-title">
+      Watch Our Wedding <span>Live</span>
+    </h2>
+
+    <p class="live-sub">
+      “Join us virtually and bless us from wherever you are in the world”
+    </p>
+
+    <a href="" target="_blank" class="live-btn">
+      ▶ Watch Live
+    </a>
+
+  </div>
+
+</section>-->
+
+<section id="Contact" class="contact-section">
+  <div class="contact-content">
+
+    <div class="contact-tag">GET IN TOUCH</div>
+
+    <h2 class="contact-title">
+      Contact <span>Details</span>
+    </h2>
+
+    <p class="contact-sub">
+      For any queries or assistance, please reach out to our families.
+    </p>
+
+    <div class="contact-cards">
+
+      <div class="contact-card">
+        <div class="contact-name">SAI KUMAR (TINKU)</div>
+        <a href="tel:+918099945050" class="phone-link">
+          📞 +91 8099945050
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-name">AKHIL KUMAR</div>
+        <a href="tel:+919346368384" class="phone-link">
+          📞 +91 9346368384
+        </a>      
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-name">NIKHIL KUMAR</div>
+        <a href="tel:+919063492334" class="phone-link">
+          📞 +91 9063492334
+        </a>      
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="music" onclick="toggleMusic(event)">🎵</div>
+
+<audio id="music" loop preload="auto">
+    <source src="https://mp3tourl.com/audio/1777597489328-9b5b3cc9-03fc-4bdf-a4c6-07fe7f1c593e.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("music");
+let started = false;
+
+// Start music on first click anywhere on the page
+document.addEventListener("click", function() {
+    if (!started) {
+        music.currentTime = 5; // Start from 5 seconds
+        music.play().catch(err => console.log(err));
+        started = true;
+        document.querySelector(".music").innerHTML = "🔊";
+    }
+}, { once: true });
+// Play/Pause button
+function toggleMusic(event) {
+    event.stopPropagation(); // Prevent triggering page click
+
+    if (music.paused) {
+        music.play();
+        document.querySelector(".music").innerHTML = "🔊";
+    } else {
+        music.pause();
+        document.querySelector(".music").innerHTML = "🔇";
+    }
+}
+</script>
+
+<footer>
+  <h2 style="font-family:'Great Vibes';font-size:40px;">
+    With Love & Gratitude
+  </h2>
+  <p style="margin-top:10px;">
+    Sinem ❤️ Satish
+  </p>
+</footer>
+
+<script>
+const m = document.getElementById("music");
+let isPlaying = false;
+
+function playMusic(){
+  if(!isPlaying){
+    m.currentTime = 5;
+    m.play();
+    isPlaying = true;
+  } else {
+    m.pause();
+    isPlaying = false;
+  }
+}
+</script>
+</body>
+</html>
