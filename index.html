@@ -1546,6 +1546,32 @@ document.addEventListener(
   },
   { once: true }
 );
+  <audio id="music" loop preload="auto">
+  <source src="./music/song.mp3" type="audio/mpeg">
+</audio>
+
+window.addEventListener("load", () => {
+  const music = document.getElementById("music");
+
+  // Start from 5th second
+  music.currentTime = 5;
+
+  const playPromise = music.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // Browser blocked autoplay
+      document.addEventListener(
+        "click",
+        () => {
+          music.currentTime = 5;
+          music.play();
+        },
+        { once: true }
+      );
+    });
+  }
+});
 </script>
 
 <footer>
