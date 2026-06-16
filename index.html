@@ -332,15 +332,18 @@ img{
 }
 
 .gallery{
-  width:100%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:25px;
+  align-items:start;
 }
-
 .gallery img{
   width:100%;
-  height:auto;
+  height:300px;           /* 🔥 FIX HEIGHT */
+  object-fit:cover;       /* 🔥 keeps image clean */
   border-radius:20px;
   border:3px solid var(--gold);
-  display:block;
+  transition:0.4s;
 }
 
 .live{
@@ -461,7 +464,7 @@ footer{
 /* PARENTS */
 .parents{
   font-size:18px;
-  color:#f5e6B2;
+  color:#f5e6b3;
 
   letter-spacing:1px;
   margin-top:15px;
@@ -1389,9 +1392,9 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
         Telangana, 501505</p>
     </div>
   </div>
-  <section id="gallery" class="section">
+<section id="gallery" class="section">
   <h2 class="title">Photo <span>Gallery</span></h2>
-  <div class="gallery">
+   <div class="gallery">
     <!--<source srcset="./images/C1.webp" type="image/webp">
     <img src="./images/C1.webp" fetchpriority="high" width="300" height="200">
     <link rel="preload" as="image" href="./images/C1.webp" fetchpriority="high">
@@ -1482,7 +1485,10 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
         <div class="contact-name">AKHIL KUMAR</div>
         <a href="tel:+919346368384" class="phone-link">
           📞 +91 9346368384
-        </a>      
+        </a>
+		<a href="tel:+919063492333" class="phone-link">
+          📞 +91 9063492333
+        </a>		
       </div>
 
       <div class="contact-card">
@@ -1497,81 +1503,37 @@ document.getElementById("secs").innerText = Math.floor((d%60000)/1000);
   </div>
 </section>
 
-<div class="music" id="musicBtn">🎵</div>
+<div class="music" onclick="toggleMusic(event)">🎵</div>
 
 <audio id="music" loop preload="auto">
-  <source src="https://mp3tourl.com/audio/1777597489328-9b5B2cc9-03fc-4bdf-a4c6-07fe7f1c593e.mp3" type="audio/mpeg">
+    <source src="https://mp3tourl.com/audio/1777597489328-9b5b3cc9-03fc-4bdf-a4c6-07fe7f1c593e.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 const music = document.getElementById("music");
-const btn = document.getElementById("musicBtn");
+let started = false;
 
-// Try autoplay after page loads
-window.addEventListener("load", () => {
-  music.volume = 0.7;
-
-  const playPromise = music.play();
-
-  if (playPromise !== undefined) {
-    playPromise
-      .then(() => {
-        btn.innerHTML = "🔊";
-      })
-      .catch(() => {
-        btn.innerHTML = "🎵";
-      });
-  }
-});
-
-// Toggle play/pause
-btn.addEventListener("click", () => {
-  if (music.paused) {
-    music.play();
-    btn.innerHTML = "🔊";
-  } else {
-    music.pause();
-    btn.innerHTML = "🔇";
-  }
-});
-
-// First user interaction starts music
-document.addEventListener(
-  "click",
-  () => {
-    if (music.paused) {
-      music.play().catch(() => {});
-      btn.innerHTML = "🔊";
+// Start music on first click anywhere on the page
+document.addEventListener("click", function() {
+    if (!started) {
+        music.currentTime = 5; // Start from 5 seconds
+        music.play().catch(err => console.log(err));
+        started = true;
+        document.querySelector(".music").innerHTML = "🔊";
     }
-  },
-  { once: true }
-);
-  <audio id="music" loop preload="auto">
-  <source src="https://mp3tourl.com/audio/1777597489328-9b5b3cc9-03fc-4bdf-a4c6-07fe7f1c593e.mp3" type="audio/mpeg">
-</audio>
+}, { once: true });
+// Play/Pause button
+function toggleMusic(event) {
+    event.stopPropagation(); // Prevent triggering page click
 
-window.addEventListener("load", () => {
-  const music = document.getElementById("music");
-
-  // Start from 5th second
-  music.currentTime = 5;
-
-  const playPromise = music.play();
-
-  if (playPromise !== undefined) {
-    playPromise.catch(() => {
-      // Browser blocked autoplay
-      document.addEventListener(
-        "click",
-        () => {
-          music.currentTime = 5;
-          music.play();
-        },
-        { once: true }
-      );
-    });
-  }
-});
+    if (music.paused) {
+        music.play();
+        document.querySelector(".music").innerHTML = "🔊";
+    } else {
+        music.pause();
+        document.querySelector(".music").innerHTML = "🔇";
+    }
+}
 </script>
 
 <footer>
